@@ -3,7 +3,7 @@ import pandas as pd
 
 st.write("Hello, World more!")
 
-df = pd.read_pickle('app/all_cities_filtered.pkl')
+df = pd.csv('https://support.staffbase.com/hc/en-us/article_attachments/360009197031/username.csv')
 df
 
 
