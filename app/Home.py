@@ -3,7 +3,7 @@ import pandas as pd
 
 st.write("Hello, World more!")
 
-df = pd.csv('https://support.staffbase.com/hc/en-us/article_attachments/360009197031/username.csv')
+df = pd.read_csv('https://support.staffbase.com/hc/en-us/article_attachments/360009197031/username.csv')
 df
 
 
