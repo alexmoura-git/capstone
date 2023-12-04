@@ -134,20 +134,6 @@ def trim_and_encode_listings(listings_csv_gz, keep_cols ):
                                                 'review_scores_value'],how='any', inplace=False)
     
     trimmed_listings = trimmed_listings[keep_cols]
-    trimmed_listings.to_pickle('app/trimmed_listings.pkl')
-    trimmed_listings = trimmed_listings[trimmed_listings.review_scores_value > 4.5]
-#     trimmed_listings = trimmed_listings[trimmed_listings.room_type == 'Entire home/apt']
-#     trimmed_listings = trimmed_listings[trimmed_listings.property_type.isin(['Entire rental unit',
-#                                                                              'Entire home',
-#                                                                              'Entire rental unit',
-#                                                                              'Entire home',
-#                                                                              'Entire condo',
-#                                                                              'Entire guesthouse',
-#                                                                              'Entire townhouse',
-#                                                                              'Entire serviced apartment',
-#                                                                              'Entire loft'])]
-                                                                             
-
     
     def extract_numeric_value(series):
 
@@ -158,10 +144,13 @@ def trim_and_encode_listings(listings_csv_gz, keep_cols ):
 
     # Get integer in text:    
     trimmed_listings.bathrooms_text =  extract_numeric_value(trimmed_listings.bathrooms_text)
+
+    trimmed_listings = trimmed_listings[trimmed_listings.review_scores_value > 4.5]
+    
+    trimmed_listings.to_csv('app/trimmed_listings.csv')
     
     
-    
-    
+
     
     return trimmed_listings
 
@@ -270,7 +259,6 @@ def remove_outliers_and_save_model( high_cut_off, low_cut_off = 10, no_eval = Tr
     excluded = len(trimmed_listings) - len(filtered_data)
     print(excluded, 'records excluded')
     print(len(filtered_data), 'records included')
-    filtered_data.to_pickle('app/all_cities_filtered.pkl')
     
     if no_eval== False:
     # Perform model grid search on the filtered data
