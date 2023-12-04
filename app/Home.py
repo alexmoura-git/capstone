@@ -1,6 +1,10 @@
 import streamlit as st
 
+
 st.write("Hello, World!")
+
+df = pd.read_pickle('all_cities_filtered.pkl')
+df
 
 
 def page_home():
