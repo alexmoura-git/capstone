@@ -1,9 +1,9 @@
 import streamlit as st
-
+import pandas as pd 
 
 st.write("Hello, World more!")
 
-df = pd.read_pickle('app/all_cities_filtered.pkl')
+df = pd.read_pickle('all_cities_filtered.pkl')
 df
 
 
