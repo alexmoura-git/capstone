@@ -41,85 +41,39 @@ st.markdown(choropleth_map_link)
 # Conclusion and Call to Action
 st.write("Join us on this journey to uncover valuable insights, contribute to data transparency, and foster an informed Airbnb community.")
 
-st.markdown("""# Challenges of Housing Affordability in America
+st.markdown("""# Welcome to the Capstone Project: "Impact of Airbnb Rentals on Housing Affordability"
 
-In the United States, housing affordability has become a pressing issue affecting millions of people. This Markdown page discusses some of the key challenges associated with housing affordability, highlighting the importance of addressing these issues.
+## Introduction
 
-## The Rising Cost of Housing
+Housing affordability in America has become an increasingly pressing issue, with numerous reports and studies highlighting the challenges faced by many residents in finding affordable housing. The dream of owning a home or renting at reasonable rates has become elusive for a significant portion of the population. In this capstone project, conducted as part of the MADS program at the University of Michigan, we, Alex Moura and Ryan Thomas, aim to shed light on the relationship between the rise of Airbnb and the ongoing crisis of housing affordability.
 
-One of the most significant challenges is the **escalating cost of housing**. Over the past few decades, the price of homes has outpaced income growth, making it increasingly difficult for individuals and families to afford suitable housing options.
+## The Housing Affordability Crisis
 
-<div class="callout warning">
-  <p>**Callout**: Rising housing costs are creating a barrier to entry for many aspiring homeowners.</p>
-</div>
+The United States has been grappling with a housing affordability crisis for years. According to a report by the National Low Income Housing Coalition (NLIHC), in 2020, there was not a single state where a full-time minimum-wage worker could afford a two-bedroom rental apartment at fair market rent. This alarming statistic underscores the severity of the problem, where low-income individuals and families are increasingly burdened by the cost of housing.
 
-## Income Inequality
+## The Airbnb Effect
 
-**Income inequality** exacerbates housing affordability problems. Low-income households often struggle to find housing that is both safe and affordable, as their wages do not keep up with rising rent and home prices.
+Originally, Airbnb emerged as a platform for homeowners to share spare rooms or temporarily rent out their primary residences to travelers, offering an opportunity to earn extra income. However, as reported by [The New York Times](https://www.nytimes.com/), [The Guardian](https://www.theguardian.com/), and others, Airbnb has evolved significantly. Investors and commercial operators have seized the opportunity to buy up properties and convert them into short-term rentals, often removing them from the traditional housing market. This shift in usage has been identified as a significant factor contributing to the shortage of long-term rental housing, thereby exacerbating the housing affordability crisis.
 
-<div class="callout danger">
-  <p>**Callout**: Income inequality results in housing instability for vulnerable populations.</p>
-</div>
+## Our Data Source: InsideAirbnb
 
-## Gentrification
+To investigate the impact of Airbnb on housing affordability, we rely on data from InsideAirbnb, an independent project that collects and analyzes Airbnb listing data in cities across the globe. InsideAirbnb provides us with a comprehensive dataset that allows us to examine the extent to which Airbnb listings have become commercialized and its implications for housing availability and affordability.
 
-**Gentrification** in urban areas can displace long-time residents and change the character of neighborhoods. As neighborhoods become more desirable, property values rise, pushing out lower-income residents who can no longer afford to live there.
+## Project Overview
 
-<div class="callout info">
-  <p>**Callout**: Gentrification can lead to cultural displacement and loss of community identity.</p>
-</div>
+Our capstone project is structured to explore and address the intricate relationship between Airbnb rentals and housing affordability:
 
-## Lack of Affordable Rental Housing
+1. **Housing Price Prediction Model**
+   - On our first page, we present a machine learning model that predicts housing prices in selected cities. By comparing these predicted prices to various statistical indicators, we aim to infer the affordability of housing in those areas, while considering the evolving role of Airbnb.
 
-The availability of **affordable rental housing** is limited in many regions. High demand and low supply contribute to skyrocketing rents, leaving renters financially strained.
+2. **Affordability Index Visualization**
+   - The second page showcases a visualization of our affordability index, drawing from a wealth of data sources, including government reports and housing market analyses. This index offers a visual representation of how Airbnb rentals might be affecting housing affordability in different regions.
 
-<div class="callout success">
-  <p>**Callout**: Creating policies to increase affordable rental housing is crucial to address this issue.</p>
-</div>
+3. **Technology Stack**
+   - Our third page delves into the technology stack we employed for this project. We utilized Python libraries for data analysis, machine learning, and visualization, along with Streamlit for creating interactive presentations, and Git for version control and collaboration.
 
-## Government Policies
+Our project is a testament to the commitment to addressing a critical issue that affects communities across the United States. By examining the evolving landscape of Airbnb rentals and their impact on housing affordability, we hope to contribute valuable insights to the ongoing discourse.
 
-Government policies play a significant role in addressing housing affordability. Programs like **affordable housing subsidies** and **rent control** can help mitigate the challenges, but their effectiveness varies by location.
+We encourage you to explore each page in detail, engage with our findings, and join us in the effort to better understand and mitigate the "Impact of Airbnb Rentals on Housing Affordability." Together, we can work towards more equitable and affordable housing solutions for all Americans.
 
-<div class="callout primary">
-  <p>**Callout**: Advocacy for fair and effective housing policies is essential to create long-term solutions.</p>
-</div>
-
-## Conclusion
-
-Housing affordability in America is a multifaceted issue that affects individuals and communities across the country. Addressing these challenges requires a combination of policy changes, community involvement, and a commitment to ensuring that everyone has access to safe and affordable housing.
-
-<style>
-/* Add custom CSS for callout styles */
-.callout {
-  margin: 20px 0;
-  padding: 20px;
-  border-radius: 4px;
-}
-
-.callout.warning {
-  background-color: #ffe66d;
-  border: 1px solid #ffdb4d;
-}
-
-.callout.danger {
-  background-color: #ff6b6b;
-  border: 1px solid #ff0000;
-}
-
-.callout.info {
-  background-color: #6bb9ff;
-  border: 1px solid #006eff;
-}
-
-.callout.success {
-  background-color: #7bed9f;
-  border: 1px solid #4CAF50;
-}
-
-.callout.primary {
-  background-color: #e3e3e3;
-  border: 1px solid #ccc;
-}
-</style>
 """)
