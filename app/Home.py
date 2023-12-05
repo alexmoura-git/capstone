@@ -6,7 +6,7 @@ import streamlit as st
 # Set page title and icon
 st.set_page_config(page_title="Unlocking Insights from InsideAirbnb Data", page_icon="🏡")
 
-
+st.image("app/banner.png", caption="InsideAirbnb Data Analysis")
 
 # Project Description
 st.markdown("## Project Description:")
@@ -37,4 +37,3 @@ st.markdown(choropleth_map_link)
 # Conclusion and Call to Action
 st.write("Join us on this journey to uncover valuable insights, contribute to data transparency, and foster an informed Airbnb community.")
 
-st.image("app/banner.png", caption="InsideAirbnb Data Analysis")
