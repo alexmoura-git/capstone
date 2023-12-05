@@ -1,10 +1,29 @@
 import streamlit as st
 
 
+# Define a function to display the top banner
+def top_banner():
+    st.markdown(
+        """
+        <div style="background-color:#f63366;padding:10px;border-radius:10px;">
+            <h1 style="color:white;text-align:center;">Unlocking Insights from InsideAirbnb Data</h1>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+# Set page title and icon
+st.set_page_config(page_title="InsideAirbnb Data Analysis", page_icon="🏡")
+
+# Include the top banner on every page
+top_banner()
 
 
 # Set page title and icon
 st.set_page_config(page_title="Unlocking Insights from InsideAirbnb Data", page_icon="🏡")
+
+
+
 
 st.image("app/banner.png", caption="InsideAirbnb Data Analysis")
 
