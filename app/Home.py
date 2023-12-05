@@ -1,10 +1,12 @@
 import streamlit as st
 
 
-st.image("banner.png", caption="InsideAirbnb Data Analysis")
+
 
 # Set page title and icon
 st.set_page_config(page_title="Unlocking Insights from InsideAirbnb Data", page_icon="🏡")
+
+st.image("banner.png", caption="InsideAirbnb Data Analysis")
 
 # Project Description
 st.markdown("## Project Description:")
