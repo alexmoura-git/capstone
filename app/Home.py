@@ -41,7 +41,7 @@ st.markdown(choropleth_map_link)
 # Conclusion and Call to Action
 st.write("Join us on this journey to uncover valuable insights, contribute to data transparency, and foster an informed Airbnb community.")
 
-st.markdown("# Challenges of Housing Affordability in America
+st.markdown("""# Challenges of Housing Affordability in America
 
 In the United States, housing affordability has become a pressing issue affecting millions of people. This Markdown page discusses some of the key challenges associated with housing affordability, highlighting the importance of addressing these issues.
 
@@ -122,4 +122,4 @@ Housing affordability in America is a multifaceted issue that affects individual
   border: 1px solid #ccc;
 }
 </style>
-")
+""")
