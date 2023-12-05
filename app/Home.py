@@ -15,7 +15,7 @@ st.image("app/banner.png", caption="InsideAirbnb Data Analysis")
 
 # Project Description
 st.markdown("## Project Description:")
-st.write("Welcome to our capstone academic project, where we delve deep into the treasure trove of data from InsideAirbnb, aligning with the mission of transparency and understanding within the vacation rental industry. Through meticulous analysis and cutting-edge machine learning techniques, we've embarked on a journey to empower both hosts and travelers with valuable insights.")
+st.write("This website is part of the Capstone Project of the Masters of Applied Data Science Program of the University of Michigan. The team composed by Alex Moura and Ryan Thomas and has as the primary objective assess the impact of Aribnb rental to the affordability of the housing is several communities in the US market")
 
 # Mission Alignment
 st.markdown("### Our Mission Alignment:")
