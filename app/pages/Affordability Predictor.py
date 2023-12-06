@@ -4,7 +4,7 @@ import lightgbm as lgb
 import joblib
 
 # Load your trained LightGBM model
-model = joblib.load('../lightgbm_prod_model.pkl')
+model = joblib.load('ightgbm_prod_model.pkl')
 
 # Load the dataset for dynamic neighborhood selection
 data = pd.read_csv('trimmed_listings.csv')
