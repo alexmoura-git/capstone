@@ -254,6 +254,7 @@ def remove_outliers_and_save_model( high_cut_off, low_cut_off = 10, no_eval = Tr
     
     # Filtering out records outside the low and high cut-off range
     filtered_data = trimmed_listings[(trimmed_listings.price >= low_cut_off) & (trimmed_listings.price <= high_cut_off)]
+    filtered_data.to_csv('app/filtered_data.csv')
     
     # Counting excluded records
     excluded = len(trimmed_listings) - len(filtered_data)
