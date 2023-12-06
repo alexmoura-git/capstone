@@ -9,6 +9,10 @@ model = joblib.load('lightgbm_prod_model.pkl')
 # Load the dataset for dynamic neighborhood selection
 data = pd.read_csv('app/trimmed_listings.csv') 
 
+def one_hot_encode(df, column_name):
+    return pd.get_dummies(df, columns=[column_name], prefix=[column_name], drop_first=True)
+
+
 # # Function to get neighborhoods based on selected city
 def get_neighborhoods(city):
     return data[data['city'] == city]['neighbourhood_cleansed'].unique()
@@ -37,10 +41,13 @@ if st.sidebar.button('Predict Price'):
                               columns=['neighbourhood_cleansed', 'property_type', 'room_type', 'accommodates', 'bathrooms_text', 'bedrooms', 'beds', 'city'])
     
     # Preprocess input_data as required by your model
-    # ...
+    input_df = pd.DataFrame([input_data])
+
+    for column_name in ['room_type', 'neighbourhood_cleansed', 'city', 'property_type']:
+    input_df = one_hot_encode(input_df, column_name)
 
     # Get the prediction
-    prediction = model.predict(input_data)
+    prediction = model.predict(input_df)
     
     # Display the prediction
     st.write(f'Predicted Price: ${prediction[0]:.2f}')
