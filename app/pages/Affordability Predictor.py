@@ -6,8 +6,8 @@ import joblib
 # Load your trained LightGBM model
 model = joblib.load('lightgbm_prod_model.pkl')
 
-# # Load the dataset for dynamic neighborhood selection
-# data = pd.read_csv('trimmed_listings.csv') 
+# Load the dataset for dynamic neighborhood selection
+data = pd.read_csv('trimmed_listings.csv') 
 
 # # Function to get neighborhoods based on selected city
 # def get_neighborhoods(city):
@@ -19,8 +19,8 @@ st.title('Airbnb Listing Price Prediction')
 # Dropdown for city selection
 # city = st.sidebar.selectbox('City', data['city'].unique())
 
-# # Dynamic dropdown for neighborhood based on selected city
-# neighborhood = st.sidebar.selectbox('Neighbourhood', get_neighborhoods(city))
+# Dynamic dropdown for neighborhood based on selected city
+neighborhood = st.sidebar.selectbox('Neighbourhood', get_neighborhoods(city))
 
 # Other input fields
 property_type = st.sidebar.selectbox('Property Type', data['property_type'].unique())
