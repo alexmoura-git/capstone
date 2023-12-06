@@ -44,7 +44,7 @@ if st.sidebar.button('Predict Price'):
     input_df = pd.DataFrame([input_data])
 
     for column_name in ['room_type', 'neighbourhood_cleansed', 'city', 'property_type']:
-    input_df = one_hot_encode(input_df, column_name)
+        input_df = one_hot_encode(input_df, column_name)
 
     # Get the prediction
     prediction = model.predict(input_df)
