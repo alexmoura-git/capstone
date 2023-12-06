@@ -7,7 +7,7 @@ import joblib
 model = joblib.load('../lightgbm_prod_model.pkl')
 
 # Load the dataset for dynamic neighborhood selection
-data = pd.read_csv('../trimmed_listings.csv')
+data = pd.read_csv('trimmed_listings.csv')
 
 # Function to get neighborhoods based on selected city
 def get_neighborhoods(city):
@@ -17,21 +17,21 @@ def get_neighborhoods(city):
 st.title('Airbnb Listing Price Prediction')
 
 # Dropdown for city selection
-city = st.selectbox('City', data['city'].unique())
+city = st.sidebar.selectbox('City', data['city'].unique())
 
 # Dynamic dropdown for neighborhood based on selected city
-neighborhood = st.selectbox('Neighbourhood', get_neighborhoods(city))
+neighborhood = st.sidebar.selectbox('Neighbourhood', get_neighborhoods(city))
 
 # Other input fields
-property_type = st.selectbox('Property Type', data['property_type'].unique())
-room_type = st.selectbox('Room Type', data['room_type'].unique())
-accommodates = st.slider('Accommodates', 1, 10, 2)  # Adjust the range as needed
-bathrooms = st.number_input('Bathrooms', min_value=1.0, max_value=10.0, value=1.0)
-bedrooms = st.slider('Bedrooms', 1, 5, 1)  # Adjust the range as needed
-beds = st.slider('Beds', 1, 5, 1)  # Adjust the range as needed
+property_type = st.sidebar.selectbox('Property Type', data['property_type'].unique())
+room_type = st.sidebar.selectbox('Room Type', data['room_type'].unique())
+accommodates = st.sidebar.slider('Accommodates', 1, 10, 2)  # Adjust the range as needed
+bathrooms = st.sidebar.number_input('Bathrooms', min_value=1.0, max_value=10.0, value=1.0)
+bedrooms = st.sidebar.slider('Bedrooms', 1, 5, 1)  # Adjust the range as needed
+beds = st.sidebar.slider('Beds', 1, 5, 1)  # Adjust the range as needed
 
 # Button to make prediction
-if st.button('Predict Price'):
+if st.sidebar.button('Predict Price'):
     # Create a DataFrame from the input features
     input_data = pd.DataFrame([[neighborhood, property_type, room_type, accommodates, bathrooms, bedrooms, beds, city]],
                               columns=['neighbourhood_cleansed', 'property_type', 'room_type', 'accommodates', 'bathrooms_text', 'bedrooms', 'beds', 'city'])
