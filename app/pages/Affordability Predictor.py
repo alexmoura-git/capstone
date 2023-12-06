@@ -7,7 +7,7 @@ import joblib
 model = joblib.load('lightgbm_prod_model.pkl')
 
 # Load the dataset for dynamic neighborhood selection
-data = pd.read_csv('trimmed_listings.csv') 
+data = pd.read_csv('app/trimmed_listings.csv') 
 
 # # Function to get neighborhoods based on selected city
 # def get_neighborhoods(city):
