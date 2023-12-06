@@ -10,14 +10,14 @@ model = joblib.load('lightgbm_prod_model.pkl')
 data = pd.read_csv('app/trimmed_listings.csv') 
 
 # # Function to get neighborhoods based on selected city
-# def get_neighborhoods(city):
-#     return data[data['city'] == city]['neighbourhood_cleansed'].unique()
+def get_neighborhoods(city):
+    return data[data['city'] == city]['neighbourhood_cleansed'].unique()
 
 # Streamlit webpage layout
 st.title('Airbnb Listing Price Prediction')
 
 # Dropdown for city selection
-# city = st.sidebar.selectbox('City', data['city'].unique())
+city = st.sidebar.selectbox('City', data['city'].unique())
 
 # Dynamic dropdown for neighborhood based on selected city
 neighborhood = st.sidebar.selectbox('Neighbourhood', get_neighborhoods(city))
