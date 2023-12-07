@@ -100,6 +100,7 @@ ingest_data(list_of_cities,list_of_files)
 
 
 listings_csv_gz =pd.read_pickle('listings_csv_gz.pkl')
+print(listings_csv_gz.city.unique())
 
 keep_cols = [ 'neighbourhood_cleansed',
              'property_type' , 
@@ -147,7 +148,7 @@ def trim_and_encode_listings(listings_csv_gz, keep_cols ):
 
     trimmed_listings = trimmed_listings[trimmed_listings.review_scores_value > 4.5]
     
-    trimmed_listings.to_csv('app/trimmed_listings.csv')
+    trimmed_listings.to_csv('app/trimmed_listings.csv', index=False)
     
     
 
@@ -169,6 +170,8 @@ def encoded_listings(df):
     # one hot encode:
     for column_name in ['room_type', 'neighbourhood_cleansed','city', 'property_type' ]:
         df = one_hot_encode(df, column_name)
+    
+    df.head().to_csv('app/encoded_listings.csv',index=False)
 
     return df
 
@@ -183,11 +186,13 @@ def model_grid_search(df, selected_models=None, cv=5, test_size=0.2, n_estimator
 
     # Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=42)
+    X_train.head().to_csv('app/X_train.csv', index=False)
 
     # Perform feature scaling
     scaler = MinMaxScaler()
     X_train_scaled = scaler.fit_transform(X_train)
     X_test_scaled = scaler.transform(X_test)
+    joblib.dump(scaler, 'app/scaler.pkl')
 
     # Define the regression models with their parameter grids
     regressors = {
@@ -254,7 +259,7 @@ def remove_outliers_and_save_model( high_cut_off, low_cut_off = 10, no_eval = Tr
     
     # Filtering out records outside the low and high cut-off range
     filtered_data = trimmed_listings[(trimmed_listings.price >= low_cut_off) & (trimmed_listings.price <= high_cut_off)]
-    filtered_data.to_csv('app/filtered_data.csv')
+    filtered_data.to_csv('app/filtered_data.csv', index=False)
     
     # Counting excluded records
     excluded = len(trimmed_listings) - len(filtered_data)
