@@ -30,7 +30,7 @@ neighborhood = st.sidebar.selectbox('Neighbourhood', get_neighborhoods(city))
 property_type = st.sidebar.selectbox('Property Type', data['property_type'].unique())
 room_type = st.sidebar.selectbox('Room Type', data['room_type'].unique())
 accommodates = st.sidebar.slider('Accommodates', 1, 10, 2)  # Adjust the range as needed
-bathrooms = st.sidebar.slider('Bathrooms', min_value=1, max_value=10, value=0.5)
+bathrooms = st.sidebar.selectbox('Bathrooms', [1,1.5,2,2.5,3.5,4,4.5,5, 5.5, 6 ,6.5,7])
 bedrooms = st.sidebar.slider('Bedrooms', 1, 5, 1)  # Adjust the range as needed
 beds = st.sidebar.slider('Beds', 1, 5, 1)  # Adjust the range as needed
 
