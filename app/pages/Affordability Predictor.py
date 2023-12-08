@@ -5,27 +5,27 @@ import joblib
 
 st.image("app/banner.png", width=700)
 
-# Load your trained LightGBM model
+# Load trained model
 model = joblib.load('lightgbm_prod_model.pkl')
 
-# Load the dataset for dynamic neighborhood selection
+# Load the dataset f
 data = pd.read_csv('app/trimmed_listings.csv') 
 
 def one_hot_encode(df, column_name):
     return pd.get_dummies(df, columns=[column_name], prefix=[column_name], drop_first=True)
 
 
-# # Function to get neighborhoods based on selected city
+# # Function to get neighborhoods 
 def get_neighborhoods(city):
     return data[data['city'] == city]['neighbourhood_cleansed'].unique()
 
-# Streamlit webpage layout
+# Title
 st.title('Airbnb Listing Price Prediction')
 
-# Dropdown for city selection
+# Dropdown for city 
 city = st.sidebar.selectbox('City', data['city'].unique())
 
-# Dynamic dropdown for neighborhood based on selected city
+# Dynamic dropdown for neighborhood 
 neighborhood = st.sidebar.selectbox('Neighbourhood', get_neighborhoods(city))
 
 # Other input fields
@@ -87,17 +87,9 @@ def make_prediction(neighborhood,
     return prediction 
 
 
-# Button to make prediction
+# Prediction Buttom
 if st.sidebar.button('Predict Price'):
-    # Create a DataFrame from the input features
-    # input_data = pd.DataFrame([[neighborhood, property_type, room_type, accommodates, bathrooms, bedrooms, beds, city]],
-    #                           columns=['neighbourhood_cleansed', 'property_type', 'room_type', 'accommodates', 'bathrooms_text', 'bedrooms', 'beds', 'city'])
-    
-    # # Preprocess input_data as required by your model
-    # input_df = pd.DataFrame([input_data])
 
-    # for column_name in ['room_type', 'neighbourhood_cleansed', 'city', 'property_type']:
-    #     input_df = one_hot_encode(input_df, column_name)
 
     # Get the prediction
     prediction = make_prediction(neighborhood, 
@@ -114,5 +106,4 @@ if st.sidebar.button('Predict Price'):
     # Display the prediction
     st.write(f'Predicted Price: ${prediction[0]:.2f}')
 
-# Run the Streamlit app
-# To start the app, run `streamlit run app.py` in your terminal
+

@@ -1,6 +1,6 @@
 url = 'http://insideairbnb.com/get-the-data'
 
-list_of_files = ['listings.csv.gz']
+list_of_files = ['listings.csv.gz', 'neighbourhoods.geojson']
 
 list_of_cities =  [
     'asheville',
