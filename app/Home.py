@@ -4,8 +4,9 @@ import streamlit as st
 # Set page title and icon
 st.set_page_config(page_title="Impact of Airbnb on housing affordability", page_icon="🏡")
 
-st.image("https://www.canva.com/design/DAF2XWtskBc/6U7Ugo-TpfjuQeUZnEjxxA/edit?utm_content=DAF2XWtskBc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton", width=800)
+st.image(https://www.canva.com/design/DAF2XWtskBc/6U7Ugo-TpfjuQeUZnEjxxA/edit?utm_content=DAF2XWtskBc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton, width=800)
 
+st.markdown("![Alt Text](https://www.canva.com/design/DAF2XWtskBc/6U7Ugo-TpfjuQeUZnEjxxA/edit?utm_content=DAF2XWtskBc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)") [image]
 
 
 st.markdown("""**Context**
