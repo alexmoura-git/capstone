@@ -3,6 +3,8 @@ import pandas as pd
 import lightgbm as lgb
 import joblib
 
+st.image("app/banner.png", width=700)
+
 # Load your trained LightGBM model
 model = joblib.load('lightgbm_prod_model.pkl')
 
