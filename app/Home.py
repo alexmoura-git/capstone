@@ -8,7 +8,7 @@ st.image("app/banner.png", width=700)
 
 
 
-st.markdown("""**Context**
+st.markdown("""**Context** 
 
 **The headwinds ahead for short term renters**  
 It’s without question that we’re heading into uncertain waters economically and within the real estate sector overall. Interest rates are increasing, individual wallet shares for travel are going down (C and Oladipo, 2023) , and because of factors like interest rate resets, and even just a maturing marketplace, Airbnb rental prices are peaking (Sperance, 2022) (Mehta, 2023). In fact, in the overall peer-to-peer marketplace segment in the US may sneakily be hitting a level of maturity (Has the gig economy peaked?, 2023). In addition, economic pressures on travelers and the opening of foreign destinations post covid, threaten the level of booking volume many Airbnb owners anticipated seeing (Summer Travel Expectations Still Strong but Economic Pressure and Poor Travel Experience May Weaken Future Demand, 2023).
