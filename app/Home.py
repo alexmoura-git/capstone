@@ -6,7 +6,7 @@ st.set_page_config(page_title="Impact of Airbnb on housing affordability", page_
 
 #st.image(https://www.canva.com/design/DAF2XWtskBc/6U7Ugo-TpfjuQeUZnEjxxA/edit?utm_content=DAF2XWtskBc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton, width=800)
 
-st.markdown("![Alt Text](https://www.canva.com/design/DAF2XWtskBc/6U7Ugo-TpfjuQeUZnEjxxA/edit?utm_content=DAF2XWtskBc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)") [image]
+st.markdown("![Alt Text](https://www.canva.com/design/DAF2XWtskBc/6U7Ugo-TpfjuQeUZnEjxxA/edit?utm_content=DAF2XWtskBc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)") 
 
 
 st.markdown("""**Context**
