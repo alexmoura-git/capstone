@@ -112,28 +112,29 @@ if st.sidebar.button('Predict Price'):
     # Display the prediction
     st.write(f'Predicted Price: ${prediction[0]:.2f}')
 
-    st.markdown(""")
-
+    # Markdown table
+    markdown_table = """
     | Variable         | Description                          | Example Value |
-|------------------|--------------------------------------|---------------|
-| daily_rental     | Daily rental price                   | $100          |
-| number_of_days   | Number of days in a month            | 30            |
-| airbnb_fee       | Airbnb service fee percentage        | 3%            |
-| occupancy_rate   | Percentage of days booked in a month | 75%           |
+    |------------------|--------------------------------------|---------------|
+    | daily_rental     | Daily rental price                   | $100          |
+    | number_of_days   | Number of days in a month            | 30            |
+    | airbnb_fee       | Airbnb service fee percentage        | 3%            |
+    | occupancy_rate   | Percentage of days booked in a month | 75%           |
 
-## Calculation
+    ## Calculation 
 
-1. **Gross Monthly Income**: `daily_rental * number_of_days * occupancy_rate`
-2. **Airbnb Fee**: `Gross Monthly Income * airbnb_fee`
-3. **Net Monthly Income**: `Gross Monthly Income - Airbnb Fee`
+    1. **Gross Monthly Income**: \`daily_rental * number_of_days * occupancy_rate\`
+    2. **Airbnb Fee**: \`Gross Monthly Income * airbnb_fee\`
+    3. **Net Monthly Income**: \`Gross Monthly Income - Airbnb Fee\`
 
-## Example Calculation
+    ## Example Calculation
 
-1. **Gross Monthly Income**: $100 * 30 * 0.75 = $2250
-2. **Airbnb Fee**: $2250 * 0.03 = $67.50
-3. **Net Monthly Income**: $2250 - $67.50 = $2182.50
+    1. **Gross Monthly Income**: $100 * 30 * 0.75 = $2250
+    2. **Airbnb Fee**: $2250 * 0.03 = $67.50
+    3. **Net Monthly Income**: $2250 - $67.50 = $2182.50
 
-Therefore, the expected net monthly income, based on the example values, is **$2182.50**.
+    Therefore, the expected net monthly income, based on the example values, is **$2182.50**.
+    """
 
+    st.markdown(markdown_table)
 
-""")
