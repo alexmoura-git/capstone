@@ -1,3 +1,5 @@
+# This module imports all data from InsideAirbnb
+
 from config import url, list_of_cities,list_of_files
 
 

@@ -1,3 +1,5 @@
+# This files holds constants that are used by other modules
+
 url = 'http://insideairbnb.com/get-the-data'
 
 list_of_files = ['listings.csv.gz', 'neighbourhoods.geojson']

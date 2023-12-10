@@ -1,3 +1,5 @@
+#Code to join the geojason data with the zipcode information data
+
 import geopandas as gpd
 from shapely.geometry import Point
 import pandas as pd
@@ -35,5 +37,6 @@ def tag_neighborhoods(list_of_cities, include_na=True):
 
     return uszips_data
 
+# Run function and save to csv in the app folder
 df = tag_neighborhoods(list_of_cities, include_na=False)
 df.to_csv("app/uszip_augmented_filtered.csv", index=False)

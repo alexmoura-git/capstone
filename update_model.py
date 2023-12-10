@@ -1,4 +1,7 @@
 
+# Script updates the model
+
+
 from config import *
 import pandas as pd
 import os
@@ -65,10 +68,6 @@ def ingest_data(list_of_cities,list_of_files):
                 df=pd.DataFrame()
                 if file.endswith(('.gz')):
                     df = pd.read_csv(full_path + '/' + file , compression='gzip')
-                # elif file.endswith(('.geojson')):
-                #     with open(os.path.join(full_path, file)) as f:
-                #         data = json.load(f)
-                #         geojson_list.append((city,snapshot,file, data))
                 elif file.endswith(('.csv')):
                     df = pd.read_csv(full_path + '/' + file )
                 df['city'] = city
@@ -110,8 +109,6 @@ keep_cols = [ 'neighbourhood_cleansed',
              'bathrooms_text',
              'bedrooms',
              'beds', 
-             #'amenities',
-             #'review_scores_rating' 
              'review_scores_value',
              'price',  
              'city']
