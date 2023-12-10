@@ -26,7 +26,7 @@ def get_property_type(room_type):
     return data[data['room_type'] == room_type]['property_type'].value_counts().head(5).index
 
 # Title
-st.title('Airbnb Listing Price Prediction')
+st.markdown('## Select property characteristics and click in the predict buttom on the left to calculate estimated rental and affordability')
 
 # Dropdown for city 
 city = st.sidebar.selectbox('City', np.sort(data['city'].unique()))
@@ -94,13 +94,13 @@ def make_prediction(neighborhood,
 
 
 # Prediction Buttom
-if st.button('          CLICK TO PREDICT RENTAL PRICE AND AFFODABILITY METRICS          '):
+if st.sidebar.button('PREDICT'):
 
 
     # Get the prediction
     prediction = make_prediction(neighborhood, 
                     property_type, 
-                    room_type,  
+                    room_type, 
                     accommodates, 
                     bathrooms, 
                     bedrooms, 
