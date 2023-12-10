@@ -112,14 +112,19 @@ if st.sidebar.button('PREDICT'):
     # Display the prediction
     st.write(f'Predicted Price: ${prediction[0]:.2f}')
 
+
+    days_in_month = 30
+    airbnb_fee = 0.16
+    occupancy_rate = 0.5
+
     # Markdown table
     markdown_table =f"""
     | Description                          | Example Value |
     |--------------------------------------|---------------|
     | Predicted Daily Rental               | ${prediction[0]:.2f} |
-    | Number of days in a month            | 30            |
-    | Airbnb service fee percentage        | 3%            |
-    | Percentage of days booked in a month | 75%           |
+    | Number of days in a month            | {days_in_month} |
+    | Airbnb service fee percentage        | {airbnb_fee}|
+    | Percentage of days booked in a month | {occupancy_rate}|
 
     ## Calculation 
 
