@@ -18,7 +18,7 @@ def one_hot_encode(df, column_name):
 
 # # Function to get neighborhoods 
 def get_neighborhoods(city):
-    return data[data['city'] == city]['neighbourhood_cleansed'].unique()
+    return data[data['city'] == city]['neighbourhood_cleansed'].vakue_counts().head()
 
 
 # # Function to get neighborhoods 
