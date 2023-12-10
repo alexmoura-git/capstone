@@ -113,10 +113,10 @@ if st.sidebar.button('PREDICT'):
     st.write(f'Predicted Price: ${prediction[0]:.2f}')
 
     # Markdown table
-    markdown_table = """
+    markdown_table =f"""
     | Variable         | Description                          | Example Value |
     |------------------|--------------------------------------|---------------|
-    | daily_rental     | Daily rental price                   | $100          |
+    | daily_rental     | Predicted Daily Rental               | ${prediction} |
     | number_of_days   | Number of days in a month            | 30            |
     | airbnb_fee       | Airbnb service fee percentage        | 3%            |
     | occupancy_rate   | Percentage of days booked in a month | 75%           |
@@ -124,7 +124,7 @@ if st.sidebar.button('PREDICT'):
     ## Calculation 
 
     1. **Gross Monthly Income**: \`daily_rental * number_of_days * occupancy_rate\`
-    2. **Airbnb Fee**: \`Gross Monthly Income * airbnb_fee\`
+    2. **Airbnb Fee**: \`Gross Monthly Income * airbnb_fee\
     3. **Net Monthly Income**: \`Gross Monthly Income - Airbnb Fee\`
 
     ## Example Calculation
