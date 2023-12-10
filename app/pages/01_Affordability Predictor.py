@@ -94,7 +94,7 @@ def make_prediction(neighborhood,
 
 
 # Prediction Buttom
-if st.sidebar.button('Predict Price'):
+if st.button(' = = = Click to Predict = = ='):
 
 
     # Get the prediction
