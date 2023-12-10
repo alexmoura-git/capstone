@@ -116,11 +116,12 @@ if st.sidebar.button('PREDICT'):
     days_in_month = 30
     airbnb_fee = 0.16
     occupancy_rate = 0.5
+    medium_neiboorhood_rental = 200
 
     # Markdown table
     markdown_table =f"""
 
-    ## Affordability Methodology and Calculation:
+    #### Affordability Methodology and Calculation:
     1. Based on the predicted daily rental we canclculate the net predicted monthly rental as per table below:
 
     | Description                          | Value |
@@ -131,8 +132,7 @@ if st.sidebar.button('PREDICT'):
     | Occupancy rate (assumed) | {occupancy_rate}|
     | **Net Predicted Monthly Rental Income** |**{prediction[0] * days_in_month * occupancy_rate * (1 - airbnb_fee):.2f}**|
 
-    ## Calculation 
-
+    #### Formula 
     **Predicted Monthly Rental Income**: \`daily_rental * number_of_days * occupancy_rate * (1 -aibnb_fee)\`
 
     """
