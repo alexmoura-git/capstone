@@ -94,13 +94,13 @@ def make_prediction(neighborhood,
 
 
 # Prediction Buttom
-if st.button(' = = = Click to Predict = = ='):
+if st.button('          CLICK TO PREDICT RENTAL PRICE AND AFFODABILITY METRICS          '):
 
 
     # Get the prediction
     prediction = make_prediction(neighborhood, 
                     property_type, 
-                    room_type, 
+                    room_type,  
                     accommodates, 
                     bathrooms, 
                     bedrooms, 
