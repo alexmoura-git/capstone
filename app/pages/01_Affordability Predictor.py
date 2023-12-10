@@ -20,6 +20,11 @@ def one_hot_encode(df, column_name):
 def get_neighborhoods(city):
     return data[data['city'] == city]['neighbourhood_cleansed'].unique()
 
+
+# # Function to get neighborhoods 
+def get_property_type(room_type):
+    return data[data['room_type'] == room_type]['property_type'].unique()
+
 # Title
 st.title('Airbnb Listing Price Prediction')
 
@@ -30,8 +35,8 @@ city = st.sidebar.selectbox('City', np.sort(data['city'].unique()))
 neighborhood = st.sidebar.selectbox('Neighbourhood', np.sort(get_neighborhoods(city)))
 
 # Other input fields
-property_type = st.sidebar.selectbox('Property Type', data['property_type'].unique())
 room_type = st.sidebar.selectbox('Room Type', data['room_type'].unique())
+property_type = st.sidebar.selectbox('Property Type', np.sort(get_property_type(room_type)))
 accommodates = st.sidebar.slider('Accommodates', 1, 10, 2)  # Adjust the range as needed
 bathrooms = st.sidebar.selectbox('Bathrooms', [1,1.5,2,2.5,3.5,4,4.5,5, 5.5, 6 ,6.5,7])
 bedrooms = st.sidebar.slider('Bedrooms', 1, 5, 1)  # Adjust the range as needed
