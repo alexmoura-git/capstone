@@ -35,7 +35,7 @@ city = st.sidebar.selectbox('City', np.sort(data['city'].unique()))
 neighborhood = st.sidebar.selectbox('Neighbourhood', np.sort(get_neighborhoods(city)))
 
 # Other input fields
-room_type = st.sidebar.selectbox('Room Type', data['room_type'].unique())
+room_type = st.sidebar.selectbox('Room Type', data['room_type'].unique().isin(['Entire home/apt', 'Private room'])
 property_type = st.sidebar.selectbox('Property Type', np.sort(get_property_type(room_type)))
 accommodates = st.sidebar.slider('Accommodates', 1, 10, 2)  # Adjust the range as needed
 bathrooms = st.sidebar.selectbox('Bathrooms', [1,1.5,2,2.5,3.5,4,4.5,5, 5.5, 6 ,6.5,7])
