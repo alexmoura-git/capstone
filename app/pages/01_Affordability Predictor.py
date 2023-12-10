@@ -23,7 +23,7 @@ def get_neighborhoods(city):
 
 # # Function to get neighborhoods 
 def get_property_type(room_type):
-    return data[data['room_type'] == room_type]['property_type'].unique()
+    return data[data['room_type'] == room_type]['property_type'].value_counts().head(5)
 
 # Title
 st.title('Airbnb Listing Price Prediction')
