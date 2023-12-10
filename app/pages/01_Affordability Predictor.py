@@ -128,12 +128,11 @@ if st.sidebar.button('PREDICT'):
     |--------------------------------------|---------------|
     | Predicted Daily Rental               | ${prediction[0]:.2f} |
     | Number of days in a month            | {days_in_month} |
-    | Airbnb service fee percentage        | {airbnb_fee}|
+    | Airbnb service fee percentage        | ${airbnb_fee}|
     | Occupancy rate (assumed) | {occupancy_rate}|
-    | **Net Predicted Monthly Rental Income** |**{prediction[0] * days_in_month * occupancy_rate * (1 - airbnb_fee):.2f}**|
-    
-    </br>
+    | **Net Predicted Monthly Rental Income** |**{prediction[0] * days_in_month * occupancy_rate * (1 - airbnb_fee):,.2f}**|
 
+    
     ##### FORMULA:
     **Predicted Monthly Rental Income**: \`daily_rental * number_of_days * occupancy_rate * (1 -aibnb_fee)\`
 
