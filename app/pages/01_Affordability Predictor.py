@@ -119,27 +119,18 @@ if st.sidebar.button('PREDICT'):
 
     # Markdown table
     markdown_table =f"""
-    | Description                          | Example Value |
+    | Description                          | Value |
     |--------------------------------------|---------------|
     | Predicted Daily Rental               | ${prediction[0]:.2f} |
     | Number of days in a month            | {days_in_month} |
     | Airbnb service fee percentage        | {airbnb_fee}|
-    | Percentage of days booked in a month | {occupancy_rate}|
-    | <b style="background-color: #f2f2f2;"> **Predicted Monthly Rental Income** </b>|**{prediction[0] * days_in_month * occupancy_rate * (1 - airbnb_fee):.2f}**|
+    | Occupancy rate (assumed) | {occupancy_rate}|
+    | **Predicted Monthly Rental Income** |**{prediction[0] * days_in_month * occupancy_rate * (1 - airbnb_fee):.2f}**|
 
     ## Calculation 
 
-    1. **Gross Monthly Income**: \`daily_rental * number_of_days * occupancy_rate\`
-    2. **Airbnb Fee**: \`Gross Monthly Income * airbnb_fee\
-    3. **Net Monthly Income**: \`Gross Monthly Income - Airbnb Fee\`
+    **Predicted Monthly Rental Income**: \`daily_rental * number_of_days * occupancy_rate * (1 -aibnb_fee\`
 
-    ## Example Calculation
-
-    1. **Gross Monthly Income**: $100 * 30 * 0.75 = $2250
-    2. **Airbnb Fee**: $2250 * 0.03 = $67.50
-    3. **Net Monthly Income**: $2250 - $67.50 = $2182.50
-
-    Therefore, the expected net monthly income, based on the example values, is **$2182.50**.
     """
 
     st.markdown(markdown_table)
