@@ -8,72 +8,34 @@ st.image("app/banner.png", width=700)
 
 
 
-# Project Description
-st.markdown("## Project Description:")
-st.write("This website is part of the Capstone Project of the Masters of Applied Data Science Program of the University of Michigan. The team composed by Alex Moura and Ryan Thomas and has as the primary objective assess the impact of Aribnb rental to the affordability of the housing in several communities in the US market")
+st.markdown("""## Project Description
 
-st.write("fwfwefwf kwoekfowekf \
-         wwfwefwfwefwefwfwefwefw \
-         wefwewfwfw")
+This website is part of the Capstone Project of the **Masters of Applied Data Science** Program of the **University of Michigan**. The team is composed by **Alex Moura** and **Ryan Thoma**s and has as primary objective to build a real time machine learning powered affordability prediction tool to help investors and renters/travelers to assess the potential impact that their decision to invest or stay in a short term rental may have in the overall housing affordability of the local community.
 
-### Mission Alignment
-st.markdown("### Our Mission Alignment:")
-st.write("InsideAirbnb is committed to providing data transparency and facilitating informed decisions in the Airbnb marketplace. Our project is rooted in this mission and aims to contribute to InsideAirbnb's goal by offering the following analyses:")
+## Context and Motivation
 
-# Analysis 1: ML Price Prediction
-st.markdown("1. **ML Price Prediction Analysis:**")
-st.write("We've developed a machine learning model to predict Airbnb prices accurately. Our analysis helps hosts understand the factors influencing their pricing strategy, ensuring competitive rates and maximizing revenue.")
-ml_price_prediction_link = "[Check out our interactive ML Price Prediction page here.](link-to-streamlit-page)"
-st.markdown(ml_price_prediction_link)
+Although the original concept of Airbnb started as a clever way to rent available idle space in people’s homes to travelers and event goes generating additional income to hosts and affordable lodging to travelers, the company created a new industry that has become a popular real estate investment opportunity. This is sparked a broad discussion about the topic and in 2019 the Economic Policy Institute conducted a study that concluded “that the costs of Airbnb outweighs the benefits” citing the impacting on housing affordability as one of the main negative externalities driving this costs which also included loss of taxation revenue and impact on the local lodging labor market. The economic costs and benefits of Airbnb: No reason for local policymakers to let Airbnb bypass tax or regulatory obligations. (n.d.). Economic Policy Institute. (https://www.epi.org/publication/the-economic-costs-and-benefits-of-airbnb-no-reason-for-local-policymakers-to-let-airbnb-bypass-tax-or-regulatory-obligations)
 
-# Analysis 2: Entire House vs. Partial House Index
-st.markdown("2. **Entire House vs. Partial House Index:**")
-st.write("To assist travelers in finding their ideal accommodations, we've created an index that compares entire houses to partial houses based on various parameters like price, amenities, and location.")
-entire_vs_partial_index_link = "[Discover the insights on our Entire House vs. Partial House Index here.](link-to-streamlit-page)"
-st.markdown(entire_vs_partial_index_link)
+With the proliferation of short-term rentals in major metropolitan areas offering new opportunities for income to property owners, we are looking to provide a rental price prediction dashboard that also provides insights into neighborhood rental affordability to assist potential owners and renters to better understand the neighborhood composition in order to make conscientious investment decisions. We aim to help investors be aware of the potential impact that their decision to purchase a property may have in the overall affordability of homes in the local communities. We also aim to inform potential short term renters of the same impact.  We hope that our tool can help investor and renters better align their investment and travel lodging decisions to their values.
 
-# Analysis 3: Choropleth of Airbnb vs. Available Housing
-st.markdown("3. **Choropleth of Airbnb vs. Available Housing:**")
-st.write("Explore a visual representation of Airbnb listings compared to available housing in different regions. Our choropleth maps provide an in-depth perspective on the distribution of Airbnb properties and their impact on the local housing market.")
-choropleth_map_link = "[Explore the maps here.](link-to-streamlit-page)"
-st.markdown(choropleth_map_link)
 
-# Conclusion and Call to Action
-st.write("Join us on this journey to uncover valuable insights, contribute to data transparency, and foster an informed Airbnb community.")
+## Our Methodology
+[NEED WRITE UP FOR THE METHODOLOGY]
 
-st.markdown("""# Welcome to the Capstone Project: "Impact of Airbnb Rentals on Housing Affordability"
 
-## Introduction
 
-Housing affordability in America has become an increasingly pressing issue, with numerous reports and studies highlighting the challenges faced by many residents in finding affordable housing. The dream of owning a home or renting at reasonable rates has become elusive for a significant portion of the population. In this capstone project, conducted as part of the MADS program at the University of Michigan, we, Alex Moura and Ryan Thomas, aim to shed light on the relationship between the rise of Airbnb and the ongoing crisis of housing affordability.
-
-## The Housing Affordability Crisis
-
-The United States has been grappling with a housing affordability crisis for years. According to a report by the National Low Income Housing Coalition (NLIHC), in 2020, there was not a single state where a full-time minimum-wage worker could afford a two-bedroom rental apartment at fair market rent. This alarming statistic underscores the severity of the problem, where low-income individuals and families are increasingly burdened by the cost of housing.
-
-## The Airbnb Effect
-
-Originally, Airbnb emerged as a platform for homeowners to share spare rooms or temporarily rent out their primary residences to travelers, offering an opportunity to earn extra income. However, as reported by [The New York Times](https://www.nytimes.com/), [The Guardian](https://www.theguardian.com/), and others, Airbnb has evolved significantly. Investors and commercial operators have seized the opportunity to buy up properties and convert them into short-term rentals, often removing them from the traditional housing market. This shift in usage has been identified as a significant factor contributing to the shortage of long-term rental housing, thereby exacerbating the housing affordability crisis.
-
-## Our Data Source: InsideAirbnb
-
+## Our data
 To investigate the impact of Airbnb on housing affordability, we rely on data from InsideAirbnb, an independent project that collects and analyzes Airbnb listing data in cities across the globe. InsideAirbnb provides us with a comprehensive dataset that allows us to examine the extent to which Airbnb listings have become commercialized and its implications for housing availability and affordability.
 
-## Project Overview
-
+## Project Navigation
 Our capstone project is structured to explore and address the intricate relationship between Airbnb rentals and housing affordability:
+1.	Affordability Prediction Model
+o	On our first page, we present a machine learning model that predicts housing prices in selected cities. 
+2.	Affordability Index Visualization
+o	The second page showcases a visualization of our affordability index.This index offers a visual representation of how Airbnb rentals might be affecting housing affordability in different regions.
+3.	Technology Stack
+o	Our third page delves into the technology stack we employed for this project. We utilized Python libraries for data analysis, machine learning, and visualization, along with Streamlit for creating interactive presentations, and Git for version control and collaboration.
 
-1. **Housing Price Prediction Model**
-   - On our first page, we present a machine learning model that predicts housing prices in selected cities. By comparing these predicted prices to various statistical indicators, we aim to infer the affordability of housing in those areas, while considering the evolving role of Airbnb.
-
-2. **Affordability Index Visualization**
-   - The second page showcases a visualization of our affordability index, drawing from a wealth of data sources, including government reports and housing market analyses. This index offers a visual representation of how Airbnb rentals might be affecting housing affordability in different regions.
-
-3. **Technology Stack**
-   - Our third page delves into the technology stack we employed for this project. We utilized Python libraries for data analysis, machine learning, and visualization, along with Streamlit for creating interactive presentations, and Git for version control and collaboration.
-
-Our project is a testament to the commitment to addressing a critical issue that affects communities across the United States. By examining the evolving landscape of Airbnb rentals and their impact on housing affordability, we hope to contribute valuable insights to the ongoing discourse.
-
-We encourage you to explore each page in detail, engage with our findings, and join us in the effort to better understand and mitigate the "Impact of Airbnb Rentals on Housing Affordability." Together, we can work towards more equitable and affordable housing solutions for all Americans.
+Join us on this journey to uncover valuable insights, contribute to data transparency, and foster an informed Airbnb community.
 
 """)
