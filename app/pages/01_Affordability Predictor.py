@@ -17,13 +17,13 @@ def one_hot_encode(df, column_name):
 
 # # Function to get neighborhoods 
 def get_neighborhoods(city):
-    return data[data['city'] == city]['neighbourhood_cleansed'].unique()
+    return data[data['city'] == city]['neighbourhood_cleansed'].unique().sort_values()
 
 # Title
 st.title('Airbnb Listing Price Prediction')
 
 # Dropdown for city 
-city = st.sidebar.selectbox('City', data['city'].unique())
+city = st.sidebar.selectbox('City', data['city'].unique().sort_values())
 
 # Dynamic dropdown for neighborhood 
 neighborhood = st.sidebar.selectbox('Neighbourhood', get_neighborhoods(city))
