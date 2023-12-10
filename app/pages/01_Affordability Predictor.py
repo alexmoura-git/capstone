@@ -132,7 +132,7 @@ if st.sidebar.button('PREDICT'):
     | Occupancy rate (assumed) | {occupancy_rate}|
     | **Net Predicted Monthly Rental Income** |**{prediction[0] * days_in_month * occupancy_rate * (1 - airbnb_fee):.2f}**|
     
-    
+    <br>
 
     ##### FORMULA:
     **Predicted Monthly Rental Income**: \`daily_rental * number_of_days * occupancy_rate * (1 -aibnb_fee)\`
