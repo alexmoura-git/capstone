@@ -236,12 +236,11 @@ if st.sidebar.button('PREDICT'):
     |--------------------------------------|---------------|
     | Predicted Daily Rental               | ${prediction[0]:.2f} |
     | Number of days in a month            | {days_in_month} |
-    | Airbnb service fee percentage        | {airbnb_fee}|
+    | [Airbnb host only fee](https://www.airbnb.com/help/article/1857)        | {airbnb_fee}|
     | Occupancy rate (assumption from [Airdna](https://www.airdna.co/blog/2023-us-short-term-rental-outlook-report) | {occupancy_rate}|
     | **Net Predicted Monthly Rental Income** |**${predicted_monthly_income :,.2f}**|
 
     
-    **FORMULA:**
     **Predicted Monthly Rental Income**: \`daily_rental * number_of_days * occupancy_rate * (1 -aibnb_fee)\`
 
     """
