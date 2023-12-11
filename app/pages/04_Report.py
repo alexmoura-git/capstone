@@ -11,21 +11,31 @@ import altair as alt
 data = pd.read_csv('app/uszip_stats.csv')
 
 
-# Streamlit UI
 st.title('Rent Burden Distribution by Neighborhood')
 
 # City selector
 city = st.selectbox('Select a city', data['city'].unique())
 
-# Filter data based on the selected city
+
 city_data = data[data['city'] == city]
 
-# Altair Chart
-chart = alt.Chart(city_data).mark_bar().encode(
+
+bars = alt.Chart(city_data).mark_bar().encode(
     x='neighbourhood_cleansed:N',
     y='rent_burden:Q',
     tooltip=['neighbourhood_cleansed', 'rent_burden']
-).properties(
+)
+
+text = bars.mark_text(
+    align='center',
+    baseline='middle',
+    dy=-5  
+).encode(
+    text='rent_burden:Q'
+)
+
+# Combine 
+chart = (bars + text).properties(
     width=700,
     height=400
 )
