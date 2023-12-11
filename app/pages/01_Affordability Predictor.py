@@ -199,7 +199,12 @@ if st.sidebar.button('PREDICT'):
     st.write(f'Predicted Price: ${prediction[0]:.2f}')
     st.write(f'Median Rent: ${median_rent:.2f}')
 
-    st.write(f'The Median Rent income in **{neighborhood} - {city}** is **${median_rent:.2f}**. The Predicted Income for this property is ${prediction[0]:.2f}')
+    st.write(f'The Median Rent income in **{neighborhood} - {city}** is ${median_rent:.2f}. The Predicted Income for this property is ${prediction[0]:.2f}')
+    if prediction>median_rent:
+        st.write(f'Given that investors may earn more by turning this property in a short-term rental, investing or staying in this property may be increasing the price pressure in the local rental market')
+    else:
+        st.write(f'Median Rent is still higher than the monthly income for this property, which makes unlikely that this rental is putting pressure in the local rental prices')
+    
 
 
     days_in_month = 30
