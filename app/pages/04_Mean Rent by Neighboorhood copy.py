@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import altair as alt
 
+st.image("app/banner.png", width=700)
 data = pd.read_csv('app/uszip_stats.csv')
 
 st.markdown('#### Mean Rent By Neighborhood')
