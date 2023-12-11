@@ -229,15 +229,15 @@ if st.sidebar.button('PREDICT'):
     markdown_table =f"""
 
     **Methodology, Calculation and Assumptions:**
-    1. We created a machine learning model from AirBnB listings using the data available at [Inside Airbnb](http://insideairbnb.com/get-the-data)
-    1. Based on the predicted daily rental we canclculate the net predicted monthly rental as per table below:
+    1. We created a machine learning model from AirBnB listings using the data available at [Inside Airbnb](http://insideairbnb.com/get-the-data). The daily rental predictions on this page are based on this model.
+    2. Based on the predicted daily rental we canclculate the net predicted monthly rental as per table below:
 
     | Description                          | Value |
     |--------------------------------------|---------------|
     | Predicted Daily Rental               | ${prediction[0]:.2f} |
     | Number of days in a month            | {days_in_month} |
     | Airbnb service fee percentage        | {airbnb_fee}|
-    | Occupancy rate (assumed) | {occupancy_rate}|
+    | Occupancy rate (assumption from [Airdna](https://www.airdna.co/blog/2023-us-short-term-rental-outlook-report) | {occupancy_rate}|
     | **Net Predicted Monthly Rental Income** |**${predicted_monthly_income :,.2f}**|
 
     
