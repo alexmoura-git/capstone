@@ -11,32 +11,34 @@ import altair as alt
 data = pd.read_csv('app/uszip_stats.csv')
 
 
+
 st.title('Rent Burden Distribution by Neighborhood')
 
 # City selector
 city = st.selectbox('Select a city', data['city'].unique())
 
-
+# Filter data 
 city_data = data[data['city'] == city]
 
-
+# Altair Chart - Horizontal Bar Chart
 bars = alt.Chart(city_data).mark_bar().encode(
-    x='neighbourhood_cleansed:N',
-    y='rent_burden:Q',
+    y='neighbourhood_cleansed:N',
+    x='rent_burden:Q',
     tooltip=['neighbourhood_cleansed', 'rent_burden']
 )
 
+
 text = bars.mark_text(
-    align='center',
+    align='left',
     baseline='middle',
-    dy=-5  
+    dx=3  #
 ).encode(
-    text=alt.Text('rent_burden:Q', format='.1f%') 
+    text=alt.Text('rent_burden:Q', format='.1f')  
 )
 
-# Combine 
+# Combine the bars and text
 chart = (bars + text).properties(
-    width=700,
+    width=800,  #
     height=400
 )
 
