@@ -213,7 +213,7 @@ if st.sidebar.button('PREDICT'):
 
     days_in_month = 30
     airbnb_fee = 0.16
-    occupancy_rate = 0.5
+    occupancy_rate = 0.564
     medium_neiboorhood_rental = 200
     predicted_monthly_income = prediction[0] * days_in_month * occupancy_rate * (1 - airbnb_fee)
 
@@ -247,8 +247,8 @@ if st.sidebar.button('PREDICT'):
     |--------------------------------------|---------------|
     | Predicted Daily Rental               | ${prediction[0]:.2f} |
     | Number of days in a month            | {days_in_month} |
-    | [Airbnb host only fee](https://www.airbnb.com/help/article/1857)        | {airbnb_fee}|
-    | Occupancy rate (assumption from [Airdna](https://www.airdna.co/blog/2023-us-short-term-rental-outlook-report) | {occupancy_rate}|
+    | [Airbnb host only fee](https://www.airbnb.com/help/article/1857)        | {airbnb_fee:.2%}|
+    | Occupancy rate (assumption from [Airdna](https://www.airdna.co/blog/2023-us-short-term-rental-outlook-report) | {occupancy_rate:.2%}|
     | **Net Predicted Monthly Rental Income** |**${predicted_monthly_income :,.2f}**|
 
     
