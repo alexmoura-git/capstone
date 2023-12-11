@@ -4,15 +4,32 @@ import numpy as np
 from page_func import * 
 
 
-# Set page title and icon
-st.set_page_config(page_title="Impact of Airbnb on housing affordability", page_icon="🏡")
+import streamlit as st
+import pandas as pd
+import altair as alt
 
-st.image("app/banner.png", width=700)
 
-st.write("Hello, World!")
 
-chart = affordability_pressure_chart(2000, 344, 500)
+data = pd.read_csv('app/uszip_stats.csv')
+
+
+# Streamlit UI
+st.title('Rent Burden Distribution by Neighborhood')
+
+# City selector
+city = st.selectbox('Select a city', data['city'].unique())
+
+# Filter data based on the selected city
+city_data = data[data['city'] == city]
+
+# Altair Chart
+chart = alt.Chart(city_data).mark_bar().encode(
+    x='neighbourhood_cleansed:N',
+    y='rent_burden:Q',
+    tooltip=['neighbourhood_cleansed', 'rent_burden']
+).properties(
+    width=700,
+    height=400
+)
 
 st.altair_chart(chart, use_container_width=True)
-
-
