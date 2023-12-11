@@ -11,6 +11,12 @@ import altair as alt
 import pandas as pd
 import numpy as np
 
+
+import streamlit as st
+
+
+
+
 ## chart ----------------
 def affordability_pressure_chart(predicted_rent, median_rent, max_val):
     
@@ -24,7 +30,7 @@ def affordability_pressure_chart(predicted_rent, median_rent, max_val):
 
     # Base chart 
     points = alt.Chart(data).mark_text(
-        text='🏠', 
+        text='🏠✅ ⚠️ ', 
         fontSize=30,
         align='center'
     ).encode(
