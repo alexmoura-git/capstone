@@ -28,7 +28,7 @@ def affordability_pressure_chart(predicted_rent, median_rent, max_val):
         'Neigboorhood Median Rent': [median_rent]
     })
 
-    if predicted_rent < median_rent: 
+    if predicted_rent > median_rent: 
         icon_text = '🏠 ⚠️ '
     else:
         icon_text = '🏠'
