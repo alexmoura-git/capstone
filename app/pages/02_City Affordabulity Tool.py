@@ -39,7 +39,7 @@ def get_neighborhoods(df, city):
 ## FUnction to generate choropleth
 def choropleth(city, choro_neighborhood, agg_neighborhoods_df, metric_option):
     # Get GeoJson File and format
-    geo_json_file_path = city_file_path = os.path.join('app/choropleth/data2', city, 'neighbourhoods.geojson')
+    geo_json_file_path = city_file_path = os.path.join('app/choropleth/data2/geojsons', city, 'neighbourhoods.geojson')
     geo_json = json.load(open(geo_json_file_path))
     
     #Create rental multipliers
