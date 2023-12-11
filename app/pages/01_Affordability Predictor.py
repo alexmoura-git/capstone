@@ -103,8 +103,8 @@ def get_property_type(room_type):
     return data[data['room_type'] == room_type]['property_type'].value_counts().head(5).index
 
 # Title
-st.markdown('**Select property characteristics and click in the predict buttom on the left to calculate estimated rental and affordability**')
-st.markdown('---')
+st.markdown("""**Select property characteristics and click in the predict buttom on the left to calculate estimated rental and affordability**
+            --- """)
 
 # Dropdown for city 
 city = st.sidebar.selectbox('City', np.sort(data['city'].unique()))
