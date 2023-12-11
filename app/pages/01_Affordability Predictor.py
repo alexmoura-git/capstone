@@ -215,6 +215,11 @@ if st.sidebar.button('PREDICT'):
     else:
         st.write(f'Median Rent is still higher than the monthly income for this property, which makes unlikely that this rental is putting pressure in the local rental prices')
 
+    message = "Given that investors may earn more by turning this property in a short-term rental, investing or staying in this property may be increasing the price pressure in the local rental market"
+
+    # Display the message in red using Streamlit's markdown function with HTML
+    st.markdown(f'<span style="color:red">{message}</span>', unsafe_allow_html=True)
+
 
     chart = affordability_pressure_chart(predicted_monthly_income , median_rent,5000)
 
