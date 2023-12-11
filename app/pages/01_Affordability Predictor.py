@@ -210,12 +210,12 @@ if st.sidebar.button('PREDICT'):
     st.write(f'Median Rent: ${median_rent:.2f}')
 
     st.write(f'The Median Rent income in **{neighborhood} - {city}** is **{median_rent:.2f}**. The Predicted Income for this property is **{predicted_monthly_income:.2f}**')
-    if predicted_monthly_income>median_rent:
-        message = "Given that investors may earn more by turning this property in a short-term rental, investing or staying in this property may be increasing the price pressure in the local rental market"
-        st.markdown(f'<span style="color:red">{message}</span>', unsafe_allow_html=True)
-    else:
-        message = "Median Rent is still higher than the monthly income for this property, which makes unlikely that this rental is putting pressure in the local rental prices"
-        st.markdown(f'<span style="color:green">{message}</span>', unsafe_allow_html=True)
+    # if predicted_monthly_income>median_rent:
+    #     message = "Given that investors may earn more by turning this property in a short-term rental, investing or staying in this property may be increasing the price pressure in the local rental market"
+    #     st.markdown(f'<span style="color:red">{message}</span>', unsafe_allow_html=True)
+    # else:
+    #     message = "Median Rent is still higher than the monthly income for this property, which makes unlikely that this rental is putting pressure in the local rental prices"
+    #     st.markdown(f'<span style="color:green">{message}</span>', unsafe_allow_html=True)
 
 
     chart = affordability_pressure_chart(predicted_monthly_income , median_rent,5000)
