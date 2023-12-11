@@ -65,4 +65,6 @@ def affordability_pressure_chart(predicted_rent, median_rent, max_val):
 
     return return_chart 
 
-affordability_pressure_chart(2000, 344, 500)
+chart = affordability_pressure_chart(2000, 344, 500)
+
+st.altair_chart(chart, use_container_width=True)
