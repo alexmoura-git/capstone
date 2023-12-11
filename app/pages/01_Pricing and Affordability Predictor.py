@@ -254,6 +254,9 @@ if st.sidebar.button('PREDICT'):
     
     **Predicted Monthly Rental Income**: \`daily_rental * number_of_days * occupancy_rate * (1 -aibnb_fee)\`
 
+    3. In order to build the plot we assumed that whenever the predicted net monthly income for short term rental is higher than the average rental income, there is an incentive for the owner to flip the property to short term rental. 
+    In practice many other factors should be considered as investor/onwer prefferences, additional expenses related to each rental mode or local/property restructions such as community bylaws.
+    Our predictor tool was created as part of an academic project and in line with the mission of the InsideAirbnB website which served as our main data source. Use your own analysis and judment before using the information provided by the tool for investment of travel lodging decisions
     """
 
     st.markdown(markdown_table)
