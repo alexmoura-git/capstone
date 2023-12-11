@@ -39,7 +39,7 @@ text = bars.mark_text(
 # Combine the bars and text
 chart = (bars + text).properties(
     width=800,  #
-    height=400
+    height=800
 )
 
 st.altair_chart(chart, use_container_width=True)
