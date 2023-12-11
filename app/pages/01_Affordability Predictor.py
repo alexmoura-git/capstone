@@ -223,7 +223,7 @@ if st.sidebar.button('PREDICT'):
     st.altair_chart(chart, use_container_width=True)
 
     # Markdown table
-    markdown_table =f"""
+    markdown_table =f"""------
 
     **Affordability Methodology and Calculation:**
     1. Based on the predicted daily rental we canclculate the net predicted monthly rental as per table below:
