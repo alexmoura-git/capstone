@@ -31,7 +31,7 @@ text = bars.mark_text(
     baseline='middle',
     dy=-5  
 ).encode(
-    text=alt.Text('rent_burden:Q', format='.1f') 
+    text=alt.Text('rent_burden:Q', format='.1f%') 
 )
 
 # Combine 
