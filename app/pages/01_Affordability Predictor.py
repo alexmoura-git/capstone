@@ -172,7 +172,7 @@ def make_prediction(neighborhood,
 
 uszip_stats=pd.read_csv('app/uszip_stats.csv')
 def get_median_rent(city, neighborhood):
-    filtered_data = uszip_stats[(uszip_stats['city'] == city) & (uszip_stats['neighborhood_cleased'] == neighborhood)]
+    filtered_data = uszip_stats[(uszip_stats['city'] == city) & (uszip_stats['neighbourhood_cleansed'] == neighborhood)]
     median_rent = filtered_data['rent_median'].median()
     return median_rent
 
