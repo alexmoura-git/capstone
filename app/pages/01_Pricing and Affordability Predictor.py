@@ -228,7 +228,8 @@ if st.sidebar.button('PREDICT'):
     
     markdown_table =f"""
 
-    **Affordability Methodology and Calculation:**
+    **Methodology, Calculation and Assumptions:**
+    1. We created a machine learning model from AirBnB listings using the data available at [Inside Airbnb](http://insideairbnb.com/get-the-data)
     1. Based on the predicted daily rental we canclculate the net predicted monthly rental as per table below:
 
     | Description                          | Value |
