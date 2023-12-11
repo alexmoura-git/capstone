@@ -194,7 +194,7 @@ if st.sidebar.button('PREDICT'):
     airbnb_fee = 0.16
     occupancy_rate = 0.5
     medium_neiboorhood_rental = 200
-    predicted_monthly_income = {prediction[0] * days_in_month * occupancy_rate * (1 - airbnb_fee)
+    predicted_monthly_income = prediction[0] * days_in_month * occupancy_rate * (1 - airbnb_fee)
 
     chart = affordability_pressure_chart(predicted_monthly_income , 2000 5000)
 
