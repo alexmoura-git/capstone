@@ -225,7 +225,7 @@ if st.sidebar.button('PREDICT'):
     # Markdown table
     markdown_table =f"""
 
-    #### Affordability Methodology and Calculation:
+    **Affordability Methodology and Calculation:**
     1. Based on the predicted daily rental we canclculate the net predicted monthly rental as per table below:
 
     | Description                          | Value |
@@ -237,7 +237,7 @@ if st.sidebar.button('PREDICT'):
     | **Net Predicted Monthly Rental Income** |**${predicted_monthly_income :,.2f}**|
 
     
-    ##### FORMULA:
+    **FORMULA:**
     **Predicted Monthly Rental Income**: \`daily_rental * number_of_days * occupancy_rate * (1 -aibnb_fee)\`
 
     """
