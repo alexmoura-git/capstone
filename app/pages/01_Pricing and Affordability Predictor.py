@@ -129,7 +129,7 @@ property_type = st.sidebar.selectbox('Property Type', np.sort(get_property_type(
 accommodates = st.sidebar.slider('Accommodates', 1, 10, 2)  # Adjust the range as needed
 bathrooms = st.sidebar.selectbox('Bathrooms', [1,1.5,2,2.5,3.5,4,4.5,5, 5.5, 6 ,6.5,7])
 bedrooms = st.sidebar.slider('Bedrooms', 1, 5, 1)  # Adjust the range as needed
-beds = st.sidebar.slider('Beds', 1, 5, 1)  # Adjust the range as needed
+#beds = st.sidebar.slider('Beds', 1, 5, 1)  # Adjust the range as needed
 
 def make_prediction(neighborhood, 
                     property_type, 
@@ -137,17 +137,19 @@ def make_prediction(neighborhood,
                     accommodates, 
                     bathrooms, 
                     bedrooms, 
-                    beds, 
+                 #   beds, 
                     city):
 
-    input_data = pd.DataFrame([[neighborhood, property_type, room_type, accommodates, bathrooms, bedrooms, beds, city]],
+    input_data = pd.DataFrame([[neighborhood, property_type, room_type, accommodates, bathrooms, bedrooms, 
+                               # beds, 
+                                city]],
                                 columns=['neighbourhood_cleansed', 
                                 'property_type', 
                                 'room_type', 
                                 'accommodates',
                                 'bathrooms_text', 
                                 'bedrooms', 
-                                'beds', 
+                                #'beds', 
                                 'city'])
 
 
@@ -202,7 +204,7 @@ if st.sidebar.button('PREDICT'):
                     accommodates, 
                     bathrooms, 
                     bedrooms, 
-                    beds, 
+                   # beds, 
                     city)
 
     print(prediction)

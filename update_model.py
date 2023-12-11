@@ -108,7 +108,7 @@ keep_cols = [ 'neighbourhood_cleansed',
              'accommodates',
              'bathrooms_text',
              'bedrooms',
-             'beds', 
+            # 'beds', 
              'review_scores_value',
              'price',  
              'city']
@@ -129,7 +129,7 @@ def trim_and_encode_listings(listings_csv_gz, keep_cols ):
     trimmed_listings = trimmed_listings.dropna(subset=[
                                                 'bathrooms_text',
                                                 'bedrooms',
-                                                'beds',
+                                             #   'beds',
                                                 'review_scores_value'],how='any', inplace=False)
     
     trimmed_listings = trimmed_listings[keep_cols]
