@@ -39,7 +39,7 @@ def get_neighborhoods(df, city):
 ## FUnction to generate choropleth
 def choropleth(city, choro_neighborhood, agg_neighborhoods_df, metric_option):
     # Get GeoJson File and format
-    geo_json_file_path = city_file_path = os.path.join('data', city, 'neighbourhoods.geojson')
+    geo_json_file_path = city_file_path = os.path.join('app/choropleth/data2', city, 'neighbourhoods.geojson')
     geo_json = json.load(open(geo_json_file_path))
     
     #Create rental multipliers
@@ -97,7 +97,7 @@ def choropleth(city, choro_neighborhood, agg_neighborhoods_df, metric_option):
     city_center_zoom = city_center_lat_lons[3]
 
     # Selected neighborhood
-    pin_point_df = pd.read_csv('choropleth/data/final/pin_point_coordinates.csv')
+    pin_point_df = pd.read_csv('app/choropleth/data2/final/pin_point_coordinates.csv')
     pin_point_df['coordinates'] = pin_point_df['coordinates'].apply(ast.literal_eval)
     neigh_val = pin_point_df.coordinates[
         (pin_point_df['city'] == city) & (pin_point_df['neighborhood'] == choro_neighborhood)]
