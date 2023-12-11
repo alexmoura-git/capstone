@@ -196,7 +196,7 @@ if st.sidebar.button('PREDICT'):
     medium_neiboorhood_rental = 200
     predicted_monthly_income = prediction[0] * days_in_month * occupancy_rate * (1 - airbnb_fee)
 
-    chart = affordability_pressure_chart(predicted_monthly_income , 2000 5000)
+    chart = affordability_pressure_chart(predicted_monthly_income , 2000 ,5000)
 
     st.altair_chart(chart, use_container_width=True)
 
