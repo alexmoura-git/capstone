@@ -12,7 +12,7 @@ data = pd.read_csv('app/uszip_stats.csv')
 
 
 
-st.title('Rent Burden Distribution by Neighborhood')
+st.markdown('#### Mean Rent By Neighboorhood')
 
 # City selector
 city = st.selectbox('Select a city', data['city'].unique())
@@ -20,10 +20,10 @@ city = st.selectbox('Select a city', data['city'].unique())
 # Filter data 
 city_data = data[data['city'] == city]
 
-# Altair Chart - Horizontal Bar Chart
+
 bars = alt.Chart(city_data).mark_bar().encode(
     y='neighbourhood_cleansed:N',
-    x='rent_burden:Q',
+    x='rent_mean:Q',
     tooltip=['neighbourhood_cleansed', 'rent_burden']
 )
 
@@ -33,7 +33,7 @@ text = bars.mark_text(
     baseline='middle',
     dx=3  #
 ).encode(
-    text=alt.Text('rent_burden:Q', format='.1f')  
+    text=alt.Text('rent_mean:Q', format='.2f')  
 )
 
 # Combine the bars and text
