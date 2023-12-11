@@ -24,7 +24,7 @@ city_data = data[data['city'] == city]
 bars = alt.Chart(city_data).mark_bar().encode(
     y='neighbourhood_cleansed:N',
     x='rent_mean:Q',
-    tooltip=['neighbourhood_cleansed', 'rent_burden']
+    tooltip=['neighbourhood_cleansed', 'rent_mean']
 )
 
 
