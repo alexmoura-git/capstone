@@ -215,13 +215,12 @@ if st.sidebar.button('PREDICT'):
 
     days_in_month = 30
     airbnb_fee = 0.16
+    additional_expenses = 0.10
     occupancy_rate = 0.564
     medium_neiboorhood_rental = 200
-    predicted_monthly_income = prediction[0] * days_in_month * occupancy_rate * (1 - airbnb_fee)
+    predicted_monthly_income = prediction[0] * days_in_month * occupancy_rate * (1 - airbnb_fee - additional_expenses)
 
     # Display the prediction
-    # st.write(f'Predicted Price: ${prediction[0]:.2f}')
-    # st.write(f'Median Rent: ${median_rent:.2f}')
 
     st.write(f'The Median Rent income in **{neighborhood} - {city}** is  **\${median_rent:.2f}**. The Predicted Income for this AirBnB property is  **\${predicted_monthly_income:.2f}**')
     if predicted_monthly_income>median_rent:
@@ -250,6 +249,7 @@ if st.sidebar.button('PREDICT'):
     | Predicted Daily Rental               | ${prediction[0]:.2f} |
     | Number of days in a month            | {days_in_month} |
     | [Airbnb host only fee](https://www.airbnb.com/help/article/1857)        | {airbnb_fee:.2%}|
+    | Additional Airbnb expenses - Sheets, Laundry, Wear and Tear | {additional_expenses :.2%}|
     | Occupancy rate (assumption from [Airdna](https://www.airdna.co/blog/2023-us-short-term-rental-outlook-report) | {occupancy_rate:.2%}|
     | **Net Predicted Monthly Rental Income** |**${predicted_monthly_income :,.2f}**|
 
