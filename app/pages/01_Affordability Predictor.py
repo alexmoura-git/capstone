@@ -199,7 +199,7 @@ if st.sidebar.button('PREDICT'):
     st.write(f'Predicted Price: ${prediction[0]:.2f}')
     st.write(f'Median Rent: ${median_rent:.2f}')
 
-    st.write(f'The Median Rent income in **{neighborhood} - {city.captalize()}** is : ${median_rent:.2f}')
+    st.write(f'The Median Rent income in **{neighborhood} - {city}** is **${median_rent:.2f}**. The Predicted Income for this property is ${prediction[0]:.2f}')
 
 
     days_in_month = 30
