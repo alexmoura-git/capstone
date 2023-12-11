@@ -22,7 +22,7 @@ Our goal is to help guide both investors as well as renters in their quest for i
 
 App is published at [Airbnb Impact on Rental Affordability - Live App](https://mads-capstone-alex-ryan.streamlit.app/Pricing_and_Affordability_Predictor)
 
-In addition to the production steps above we also performed EDA, Data cleasing, model selecting and feature selection as preparation for production in the notebook **Model Selection, Feature Selection and Tunning - Non Prod Steps.ipynb** available in this repository.
+In addition to the production steps above we also performed EDA, Data cleasing, model selecting and feature selection as preparation for production in the notebook [Model Selection, Feature Selection and Tunning - Non Prod Steps.ipynb](https://github.com/alexmoura-git/capstone/blob/main/Model%20Selection%2C%20Feature%20Selection%20and%20Tunning%20-%20Non%20Prod%20Steps.ipynb) available in this repository.
 
 
 
