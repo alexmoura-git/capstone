@@ -19,11 +19,6 @@ Although the original concept of Airbnb started as a clever way to rent availabl
 With the proliferation of short-term rentals in major metropolitan areas offering new opportunities for income to property owners, we are looking to provide a rental price prediction dashboard that also provides insights into neighborhood rental affordability to assist potential owners and renters to better understand the neighborhood composition in order to make conscientious investment decisions. We aim to help investors be aware of the potential impact that their decision to purchase a property may have in the overall affordability of homes in the local communities. We also aim to inform potential short term renters of the same impact.  We hope that our tool can help investor and renters better align their investment and travel lodging decisions to their values.
 
 
-## Our Methodology
-[NEED WRITE UP FOR THE METHODOLOGY]
-
-
-
 ## Our data
 To investigate the impact of Airbnb on housing affordability, we rely on data from InsideAirbnb, an independent project that collects and analyzes Airbnb listing data in cities across the globe. InsideAirbnb provides us with a comprehensive dataset that allows us to examine the extent to which Airbnb listings have become commercialized and its implications for housing availability and affordability.
 
