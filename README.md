@@ -15,7 +15,14 @@ Our goal is to help guide both investors as well as renters in their quest for i
 ## How to use this repository and run its code
 * Clone this repository into a local or remote environment
 * run import_data.py - This imports the Insigde Airbnb data into your deployment enviroment
-* run update_model.py - Updates the prediction model and the scaler
+* run update_model.py - Updates and fine-tunes the prediction model and the scaler
 * geocode.py - updates geocoding of uszip rental stats file
 * deploy in your local, remote or streamlit cloud enviroment
     * Home page is Home.py and additional pages are in the /Pages Folder
+
+App is published at [Airbnb Impact on Rental Affordability - Live App](https://mads-capstone-alex-ryan.streamlit.app/Pricing_and_Affordability_Predictor)
+
+In addition to the production steps above we also performed EDA, Data cleasing, model selecting and feature selection as preparation for production in the notebook **Model Selection, Feature Selection and Tunning - Non Prod Steps.ipynb** available in this repository.
+
+
+
