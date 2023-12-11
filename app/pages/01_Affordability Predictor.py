@@ -170,6 +170,15 @@ def make_prediction(neighborhood,
     return prediction 
 
 
+uszip_stats=pd.read_csv('app/uszip_stats.csv')
+def get_median_rent(city, neighborhood):
+    filtered_data = uszip_stats[(uszip_stats['city'] == city) & (uszip_stats['neighborhood_cleased'] == neighborhood)]
+    median_rent = filtered_data['rent_median'].median()
+    return median_rent
+
+median_rent= get_median_rent(city, neighborhood)
+
+
 # Prediction Buttom
 if st.sidebar.button('PREDICT'):
 
@@ -188,6 +197,7 @@ if st.sidebar.button('PREDICT'):
     
     # Display the prediction
     st.write(f'Predicted Price: ${prediction[0]:.2f}')
+    st.write(f'Median Rent: ${median_rent:.2f}')
 
 
     days_in_month = 30
@@ -196,7 +206,7 @@ if st.sidebar.button('PREDICT'):
     medium_neiboorhood_rental = 200
     predicted_monthly_income = prediction[0] * days_in_month * occupancy_rate * (1 - airbnb_fee)
 
-    chart = affordability_pressure_chart(predicted_monthly_income , 2000 ,5000)
+    chart = affordability_pressure_chart(predicted_monthly_income , median_rent,5000)
 
     st.altair_chart(chart, use_container_width=True)
 
