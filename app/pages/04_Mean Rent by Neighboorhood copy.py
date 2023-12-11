@@ -23,8 +23,8 @@ city_data = data[data['city'] == city]
 
 bars = alt.Chart(city_data).mark_bar().encode(
     y='neighbourhood_cleansed:N',
-    x='rent_mean:Q',
-    tooltip=['neighbourhood_cleansed', 'rent_mean']
+    x='rent_median:Q',
+    tooltip=['neighbourhood_cleansed', 'rent_median']
 )
 
 
@@ -33,7 +33,7 @@ text = bars.mark_text(
     baseline='middle',
     dx=3  #
 ).encode(
-    text=alt.Text('rent_mean:Q', format='.2f')  
+    text=alt.Text('rent_median:Q', format='.2f')  
 )
 
 # Combine the bars and text
