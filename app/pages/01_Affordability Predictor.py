@@ -195,15 +195,7 @@ if st.sidebar.button('PREDICT'):
 
     print(prediction)
     
-    # Display the prediction
-    st.write(f'Predicted Price: ${prediction[0]:.2f}')
-    st.write(f'Median Rent: ${median_rent:.2f}')
 
-    st.write(f'The Median Rent income in **{neighborhood} - {city}** is ${median_rent:.2f}. The Predicted Income for this property is ${prediction[0]:.2f}')
-    if prediction>median_rent:
-        st.write(f'Given that investors may earn more by turning this property in a short-term rental, investing or staying in this property may be increasing the price pressure in the local rental market')
-    else:
-        st.write(f'Median Rent is still higher than the monthly income for this property, which makes unlikely that this rental is putting pressure in the local rental prices')
     
 
 
@@ -212,6 +204,17 @@ if st.sidebar.button('PREDICT'):
     occupancy_rate = 0.5
     medium_neiboorhood_rental = 200
     predicted_monthly_income = prediction[0] * days_in_month * occupancy_rate * (1 - airbnb_fee)
+
+    # Display the prediction
+    st.write(f'Predicted Price: ${prediction[0]:.2f}')
+    st.write(f'Median Rent: ${median_rent:.2f}')
+
+    st.write(f'The Median Rent income in **{neighborhood} - {city}** is ${median_rent:.2f}. The Predicted Income for this property is ${predicted_monthly_income:.2f}')
+    if predicted_monthly_income>median_rent:
+        st.write(f'Given that investors may earn more by turning this property in a short-term rental, investing or staying in this property may be increasing the price pressure in the local rental market')
+    else:
+        st.write(f'Median Rent is still higher than the monthly income for this property, which makes unlikely that this rental is putting pressure in the local rental prices')
+
 
     chart = affordability_pressure_chart(predicted_monthly_income , median_rent,5000)
 
