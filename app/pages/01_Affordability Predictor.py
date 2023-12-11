@@ -104,6 +104,7 @@ def get_property_type(room_type):
 
 # Title
 st.markdown("""**Use panel on the left to calculate estimated rental and affordability**""")
+st.markdown("""--- """)
 
 # Dropdown for city 
 city = st.sidebar.selectbox('City', np.sort(data['city'].unique()))
