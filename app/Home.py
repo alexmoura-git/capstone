@@ -24,8 +24,7 @@ To investigate the impact of Airbnb on housing affordability, we rely on data fr
 
 ## Project Navigation
 Our capstone project is structured to explore and address the intricate relationship between Airbnb rentals and housing affordability:
-1.	[Pricing and Affordability Predictor](/Pricing_and_Affordability_Predictor)
-o	On our first page, we present a machine learning model that predicts housing prices in selected cities. 
+1.	[Pricing and Affordability Predictor](/Pricing_and_Affordability_Predictor): This tool predicts the AirbnB prices, monthly rental income and assess the impact of this property on local rental affordability.
 2.	Affordability Index Visualization
 o	The second page showcases a visualization of our affordability index.This index offers a visual representation of how Airbnb rentals might be affecting housing affordability in different regions.
 3.	Technology Stack
