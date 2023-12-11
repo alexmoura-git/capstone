@@ -13,7 +13,7 @@ st.set_page_config(page_title="Impact of Airbnb on housing affordability", page_
 st.image("app/banner.png", width=700)
 
 ## Import DF
-df = pd.read_csv('capstone/app/choropleth/data/final/agg_us_neighborhood_df.csv')
+df = pd.read_csv('/app/choropleth/data/final/agg_us_neighborhood_df.csv')
 
 def remove_decimal(value):
     try:
