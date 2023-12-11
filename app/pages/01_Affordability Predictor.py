@@ -104,7 +104,7 @@ def get_property_type(room_type):
 
 # Title
 st.markdown("""**Use panel on the left to calculate estimated rental and affordability**""")
-st.markdown("""--- """)
+
 
 # Dropdown for city 
 city = st.sidebar.selectbox('City', np.sort(data['city'].unique()))
@@ -183,7 +183,7 @@ median_rent= get_median_rent(city, neighborhood)
 # Prediction Buttom
 if st.sidebar.button('PREDICT'):
 
-
+    st.markdown("""--- """)
     # Get the prediction
     prediction = make_prediction(neighborhood, 
                     property_type, 
