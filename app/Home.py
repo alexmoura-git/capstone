@@ -22,13 +22,7 @@ With the proliferation of short-term rentals in major metropolitan areas offerin
 ## Our data
 To investigate the impact of Airbnb on housing affordability, we rely on data from InsideAirbnb, an independent project that collects and analyzes Airbnb listing data in cities across the globe. InsideAirbnb provides us with a comprehensive dataset that allows us to examine the extent to which Airbnb listings have become commercialized and its implications for housing availability and affordability.
 
-## Project Navigation
-Our capstone project is structured to explore and address the intricate relationship between Airbnb rentals and housing affordability:
-1.	[Pricing and Affordability Predictor](/Pricing_and_Affordability_Predictor): This tool predicts the AirbnB prices, monthly rental income and assess the impact of this property on local rental affordability.
-2.	Affordability Index Visualization
-o	The second page showcases a visualization of our affordability index.This index offers a visual representation of how Airbnb rentals might be affecting housing affordability in different regions.
-3.	Technology Stack
-o	Our third page delves into the technology stack we employed for this project. We utilized Python libraries for data analysis, machine learning, and visualization, along with Streamlit for creating interactive presentations, and Git for version control and collaboration.
+
 
 Join us on this journey to uncover valuable insights, contribute to data transparency, and foster an informed Airbnb community.
 
