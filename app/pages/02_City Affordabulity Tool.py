@@ -43,9 +43,9 @@ def choropleth(city, choro_neighborhood, agg_neighborhoods_df, metric_option):
     geo_json = json.load(open(geo_json_file_path))
     
     #Create rental multipliers
-    agg_neighborhoods_df['Affordable Rent to Affordable Income'] = round(agg_neighborhoods_df['rent_per_month']/((agg_neighborhoods_df['income_household_median']*.5)/12))
-    agg_neighborhoods_df['Median Rent to Affordable Income'] = round((agg_neighborhoods_df['rent_median']/((agg_neighborhoods_df['income_household_median']*.5)/12)))
-    agg_neighborhoods_df['Short-Term Rent to Affordable Income'] = round((agg_neighborhoods_df['price']*30*.564)/((agg_neighborhoods_df['income_household_median']*.5)/12))
+    agg_neighborhoods_df['Affordable Rent to Affordable Income'] = round(agg_neighborhoods_df['rent_per_month']/((agg_neighborhoods_df['income_household_median']*.5)/12),3)
+    agg_neighborhoods_df['Median Rent to Affordable Income'] = round((agg_neighborhoods_df['rent_median']/((agg_neighborhoods_df['income_household_median']*.5)/12)),3)
+    agg_neighborhoods_df['Short-Term Rent to Affordable Income'] = round((agg_neighborhoods_df['price']*30*.564)/((agg_neighborhoods_df['income_household_median']*.5)/12),3)
 
     agg_neighborhoods_df_city = agg_neighborhoods_df[agg_neighborhoods_df.city == city]
     
