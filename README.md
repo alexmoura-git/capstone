@@ -35,6 +35,6 @@ The datasets generated, manipulated, and analyzed during the current study are p
 | Data                         | Description|
 |--------------------------------------|---------------|
 | Inside Airbnb - listings and geojson files           | Inside Airbnb data is made available under license that the author does not have permission to share based on community guidelines not to republish the data. Access to the data is available at Inside Airbnb, http://insideairbnb.com/get-the-data and datasets utilized were from Q3, 2023.|
-| HUD - Picture of Subsidized Households          | HUD’s data is available in the following repository as well as HUD’s website, https://www.huduser.gov/portal/datasets/pictures/files/Zipcode_2022_2020census.xlsx|
+| HUD - Picture of Subsidized Households          | HUD’s data is available in the following link: https://www.huduser.gov/portal/datasets/pictures/files/Zipcode_2022_2020census.xlsx|
 |Simplemaps - US Zip Code Database | Simplemaps data is made available under license and is not available for public redistribution. Please contact Ryan Thomas (ryanwt@umich.edu) or Alex Moura (moura@umich.edu) for review and access to the dataset. |
 
